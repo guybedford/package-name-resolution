@@ -4,9 +4,9 @@ Node.js proposal to support resolving any package by its own package.json _"name
 
 ### Background
 
-Node.js `--experimental modules` now supports a concept of package scope where loading a _".js"_ module checks frecursively or the parent folder package.json file to see if a _"type": "module"_ scope has been provided.
+Node.js `--experimental modules` now supports a concept of package scope where loading a _".js"_ module checks recursively for the parent folder package.json file to see if a _"type": "module"_ scope has been provided.
 
-As a result, using the same package scope principles we can check the package.json "name" for any module allowing support for this feature as a simple way to solve the backtracking import problem.
+Using this same package scope principle we can also check the package.json "name" for any module within a package allowing support for resolving the package's own name as a simple way to solve the backtracking import problem.
 
 ### Example
 
