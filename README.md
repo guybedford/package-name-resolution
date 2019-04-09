@@ -45,7 +45,7 @@ A key feature of this proposal is package portability.
 
 That is, publishing the package to npm and having it installed in node_modules continues to support this feature just fine as the package scope applies just the same in node_modules, without any further configuration.
 
-Even if the package alias (directory name in node_modules) is different, that doesn't affect the package.json "name" field still being the original name, that will continue to work in the scope just fine.
+Even if the package alias (directory name in node_modules) is different, that doesn't affect the package.json _"name"_ field still being the original name, that will continue to work in the scope just fine.
 
 The cost here is that the value of _"name"_ gets reserved in the resolver within the package, and cannot resolve to any other dependencies other than the package itself.
 
@@ -59,7 +59,7 @@ This proposal is designed to apply to not just Node.js but also other tools so t
 
 That is still unclear. This proposal is currently only for the ES Module resolver, but support could be provided for the CommonJS resolver as well.
 
-The concern here is that this might break existing packages that happen to have a "dependencies" entry matching their own "name" entry, so there are some backwards compatibility concerns here that would need to be worked out.
+The concern here is that this might break existing packages that happen to have a _"dependencies"_ entry matching their own _"name"_ entry, so there are some backwards compatibility concerns here that would need to be worked out.
 
 ### Specification & Implementation
 
