@@ -49,8 +49,18 @@ Even if the package alias (directory name in node_modules) is different, that do
 
 The cost here is that the value of _"name"_ gets reserved in the resolver within the package, and cannot resolve to any other dependencies other than the package itself.
 
-### CommonJS Support
+### FAQ
 
-This proposal is currently only for the ES Module resolver, but support could be provided for the CommonJS resolver as well.
+#### What about tooling support?
 
-The only concern here is that this might break existing packages that happen to have a "dependencies" entry matching their own "name" entry, so there are some backwards compatibility concerns here that would need to be worked out.
+This proposal is designed to apply to not just Node.js but also other tools so that support can be provided throughout the ecosystem for the conventions it specifies. That will take some time, but with Node.js leading the way it shouldn't take long for tooling to follow, since this provides a solution to a well-known problem.
+
+#### Could this be supported for CommonJS?
+
+That is still unclear. This proposal is currently only for the ES Module resolver, but support could be provided for the CommonJS resolver as well.
+
+The concern here is that this might break existing packages that happen to have a "dependencies" entry matching their own "name" entry, so there are some backwards compatibility concerns here that would need to be worked out.
+
+### Specification & Implementation
+
+No specification or implementation work has begun yet.
