@@ -33,7 +33,7 @@ to contain:
 }
 ```
 
-this would then allow us to write `app/featureB/module.js` as:
+this would then allow us to write `app/featureA/sub/module.js` as:
 
 ```js
 import app from 'app/featureB/module.js';
