@@ -49,6 +49,16 @@ Even if the package alias (directory name in node_modules) is different, that do
 
 The cost here is that the value of _"name"_ gets reserved in the resolver within the package, and cannot resolve to any other dependencies other than the package itself.
 
+### Alternative Approaches
+
+There could be alternatives to using the package.json _"name"_ to be explored, such as having a unique name or symbol to indicate the current package.
+
+For example:
+
+```js
+import app from '~/featureB/module.js';
+```
+
 ### FAQ
 
 #### What about tooling support?
